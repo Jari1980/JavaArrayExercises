@@ -1,6 +1,7 @@
 package org.example;
 
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -18,6 +19,9 @@ public class Main {
                     case 2:
                         exercise2();
                         break;
+                    case 3:
+                        exercise3();
+                        break;
                     default:
                         System.out.println("Closing program");
                         System.exit(0);
@@ -29,6 +33,21 @@ public class Main {
             }
         }
     }
+    public static void exercise3(){
+        System.out.println("Creating string array with random cities:");
+        String[] arr = {"Katrineholm", "London", "peking","New York", "dallas","Paris"};
+        for(String element : arr){
+            System.out.print(element + " ");
+        }
+        System.out.println();
+        System.out.println("Sorting the array none case sensitive and alphabetical");
+        Arrays.sort(arr, String.CASE_INSENSITIVE_ORDER);
+        for(String element : arr){
+            System.out.print(element + " ");
+        }
+        System.out.println();
+    }
+
     public static void exercise2(){
         System.out.println("Creating method indexOf which will return first index of a element in int array, gives negative if it doesnt exist");
         int[] arr1 = {5,5,6,7};
