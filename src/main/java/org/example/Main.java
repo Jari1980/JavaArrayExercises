@@ -32,6 +32,9 @@ public class Main {
                     case 6:
                         exercise6();
                         break;
+                    case 7:
+                        exercise7();
+                        break;
                     default:
                         System.out.println("Closing program");
                         System.exit(0);
@@ -43,6 +46,29 @@ public class Main {
             }
         }
     }
+    public static void exercise7(){
+        System.out.println("Creating int array arr that can hold 10 elements:");
+        int[] arr = new int[10];
+        System.out.println("Giving arr following values:");
+        arr[0] = 1;
+        arr[1] = 2;
+        arr[2] = 4;
+        arr[3] = 7;
+        arr[4] = 9;
+        arr[5] = 12;
+        for (int element : arr){
+            System.out.print(element + " ");
+        }
+        System.out.println();
+        System.out.println("Odd elements in array arr: ");
+        for (int i = 0; i < arr.length; i++){
+            if (arr[i] % 2 != 0){
+                System.out.print(arr[i] + " ");
+            }
+        }
+        System.out.println();
+    }
+
     public static void exercise6(){
         int[] arr = {43, 5, 23,17, 2, 14};
         int sum = 0;
