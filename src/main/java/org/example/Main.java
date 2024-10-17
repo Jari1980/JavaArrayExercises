@@ -22,6 +22,9 @@ public class Main {
                     case 3:
                         exercise3();
                         break;
+                    case 4:
+                        exercise4();
+                        break;
                     default:
                         System.out.println("Closing program");
                         System.exit(0);
@@ -33,6 +36,26 @@ public class Main {
             }
         }
     }
+    public static void exercise4(){
+        System.out.println("Creating array arr1 with elements: ");
+        int[] arr1 = {1, 15, 20};
+        for (int element : arr1){
+            System.out.print(element + " ");
+        }
+        System.out.println();
+        System.out.println("Creating new array arr2 with equal amount of elements as arr1");
+        int[] arr2 = new int[arr1.length];
+        System.out.println("Copying elements with from arr1 to arr2, could have done this with Arrays.copyOf aswell");
+        for(int i = 0; i < arr1.length; i++){
+            arr2[i] = arr1[i];
+        }
+        System.out.println("arr2 after copy:");
+        for (int element : arr2){
+            System.out.print(element + " ");
+        }
+        System.out.println();
+    }
+
     public static void exercise3(){
         System.out.println("Creating string array with random cities:");
         String[] arr = {"Katrineholm", "London", "peking","New York", "dallas","Paris"};
