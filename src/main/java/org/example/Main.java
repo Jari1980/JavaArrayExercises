@@ -27,6 +27,16 @@ public class Main {
         }
     }
     public static void exercise1(){
-
+        int[] arr = {12,34,56,78,90};
+        System.out.println("Printing elements in Int array with for loop:");
+        for (int i = 0; i < arr.length; i++){
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+        System.out.println("Printing elements with foreach loop: ");
+        for (int element : arr){
+            System.out.print(element + " ");
+        }
+        System.out.println();
     }
 }
