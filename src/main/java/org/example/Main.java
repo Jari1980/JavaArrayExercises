@@ -25,6 +25,9 @@ public class Main {
                     case 4:
                         exercise4();
                         break;
+                    case 5:
+                        exercise5();
+                        break;
                     default:
                         System.out.println("Closing program");
                         System.exit(0);
@@ -36,6 +39,23 @@ public class Main {
             }
         }
     }
+    public static void exercise5(){
+        System.out.println("Creating a two dimensional string array [2][2]:");
+        String[][] arr = new String[2][2];
+        System.out.println("Assigning random string country and city values:");
+        arr[0][0] = "Sweden";
+        arr[0][1] = "Katrineholm";
+        arr[1][0] = "France";
+        arr[1][1] = "Paris";
+        System.out.println("Printing out arr row by row:");
+        for (int i = 0; i < arr.length; i++){
+            for (int j = 0; j < arr[0].length; j++){
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
     public static void exercise4(){
         System.out.println("Creating array arr1 with elements: ");
         int[] arr1 = {1, 15, 20};
