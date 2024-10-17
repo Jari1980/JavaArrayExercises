@@ -1,6 +1,7 @@
 package org.example;
 
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -28,6 +29,9 @@ public class Main {
                     case 5:
                         exercise5();
                         break;
+                    case 6:
+                        exercise6();
+                        break;
                     default:
                         System.out.println("Closing program");
                         System.exit(0);
@@ -39,6 +43,22 @@ public class Main {
             }
         }
     }
+    public static void exercise6(){
+        int[] arr = {43, 5, 23,17, 2, 14};
+        int sum = 0;
+        for(int i = 0; i < arr.length; i++){
+            sum = sum + arr[i];
+        }
+        double average = (double)sum / arr.length;
+        System.out.println("Creating array arr such as:");
+        for(int element : arr){
+            System.out.print(element + " ");
+        }
+        System.out.println();
+        System.out.format("The average of these numbers, rounded to one decimal: %.1f", average);
+        System.out.println();
+    }
+
     public static void exercise5(){
         System.out.println("Creating a two dimensional string array [2][2]:");
         String[][] arr = new String[2][2];
