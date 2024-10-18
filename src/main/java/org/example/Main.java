@@ -3,6 +3,7 @@ package org.example;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
@@ -50,6 +51,9 @@ public class Main {
                     case 12:
                         exercise12();
                         break;
+                    case 13:
+                        exercise13();
+                        break;
                     default:
                         System.out.println("Closing program");
                         System.exit(0);
@@ -61,6 +65,59 @@ public class Main {
             }
         }
     }
+    public static void exercise13(){
+        System.out.println("Creating two int arrays with length 10 arr1 and arr2");
+        int[] arr1 = new int[10];
+        int[] arr2 = new int[10];
+        System.out.println("Giving arr1 random values between 1-10: ");
+        Random rand = new Random();
+        for(int i = 0; i < arr1.length; i++){
+            arr1[i] = rand.nextInt(1, 11);
+        }
+        for(int ele : arr1){
+            System.out.print(ele + " ");
+        }
+        System.out.println();
+        System.out.println("Finding out the amount of even and odd numbers in arr1");
+        int odd = 0;
+        int even = 0;
+        for(int i = 0; i < arr1.length; i++){
+            if(arr1[i] % 2 == 0){
+                even++;
+            }
+            else{
+                odd++;
+            }
+        }
+        System.out.println("Creating two temp arrays one for even and one for odd number and filling these from arr1:");
+        int[] arrEven = new int[even];
+        int[] arrOdd = new int[odd];
+        int counterEven = 0;
+        int counterOdd = 0;
+        for(int i = 0; i < arr1.length; i++){
+            if(arr1[i] % 2 == 0){
+                arrEven[counterEven] = arr1[i];
+                counterEven++;
+            }
+            else{
+                arrOdd[counterOdd] = arr1[i];
+                counterOdd++;
+            }
+        }
+        System.out.println("Giving arr2 the odd values then the even: ");
+        for(int i = 0; i < odd; i++){
+            arr2[i] = arrOdd[i];
+        }
+        for(int i = 0; i < even; i++){
+            arr2[i + odd - 1] = arrEven[i];
+        }
+        System.out.println("arr2: ");
+        for(int ele : arr2){
+            System.out.print(ele + " ");
+        }
+        System.out.println();
+    }
+
     public static void exercise12(){
         System.out.println("Creating 2 dimensional array int arr: ");
         int[][] arr = {
