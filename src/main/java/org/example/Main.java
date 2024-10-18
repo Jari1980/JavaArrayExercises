@@ -44,6 +44,9 @@ public class Main {
                     case 10:
                         exercise10();
                         break;
+                    case 11:
+                        exercise11();
+                        break;
                     default:
                         System.out.println("Closing program");
                         System.exit(0);
@@ -55,6 +58,42 @@ public class Main {
             }
         }
     }
+    public static void exercise11(){
+        var scan = new Scanner(System.in);
+        ArrayList<Integer> arr = new ArrayList<Integer>();
+        while(true){
+            System.out.println("Enter a number: ");
+            try{
+                int num = scan.nextInt();
+                if (!arr.contains(num)){
+                    arr.add(num);
+                }
+                else{
+                    break;
+                }
+            }
+            catch(Exception bad){
+                System.out.println("Not a valid integer");
+            }
+        }
+        System.out.println("The values typed: ");
+        for(int ele : arr){
+            System.out.print(ele + " ");
+        }
+        System.out.println();
+        System.out.println("Reversing the array  with help of tempArr: ");
+        ArrayList<Integer> tempArr = new ArrayList<Integer>();
+        for (int i = arr.size() - 1; i >= 0; i--){
+            tempArr.add(arr.get(i));
+        }
+        arr = tempArr;
+        System.out.println("arr: ");
+        for(int ele : arr){
+            System.out.print(ele + " ");
+        }
+        System.out.println();
+    }
+
     public static void exercise10(){
         System.out.println("Creating a multiplication table of size 10:");
         int[][] arr = new int[10][10];
