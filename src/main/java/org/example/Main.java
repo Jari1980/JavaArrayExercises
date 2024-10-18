@@ -35,6 +35,9 @@ public class Main {
                     case 7:
                         exercise7();
                         break;
+                    case 8:
+                        exercise8();
+                        break;
                     default:
                         System.out.println("Closing program");
                         System.exit(0);
@@ -46,6 +49,27 @@ public class Main {
             }
         }
     }
+    public static void exercise8(){
+        System.out.println("Creating int array arr:");
+        int[] arr = {20, 20, 40, 20, 30, 40, 50, 60, 50};
+        for (int element: arr){
+            System.out.print(element + " ");
+        }
+        System.out.println();
+        System.out.println("Declaring list array arrList of type Integer which will get all values excluding duplicates from arr");
+        ArrayList<Integer> arrList = new ArrayList<Integer>();
+        for (int i = 0; i < arr.length; i++){
+            if(!arrList.contains(arr[i])){
+                arrList.add(arr[i]);
+            }
+        }
+        System.out.println("arrList: ");
+        for (int element : arrList){
+            System.out.print(element + " ");
+        }
+        System.out.println();
+    }
+
     public static void exercise7(){
         System.out.println("Creating int array arr that can hold 10 elements:");
         int[] arr = new int[10];
