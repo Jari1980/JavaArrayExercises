@@ -38,6 +38,9 @@ public class Main {
                     case 8:
                         exercise8();
                         break;
+                    case 9:
+                        exercise9();
+                        break;
                     default:
                         System.out.println("Closing program");
                         System.exit(0);
@@ -49,6 +52,32 @@ public class Main {
             }
         }
     }
+    public static void exercise9(){
+        System.out.println("In order to expand a array I would simple use a ArrayList but that is too easy so Ill use a temporal array with 1 extra slot and copy.");
+        System.out.println("Initial array int arr with size 4: ");
+        int[] arr = {1, 1, 5, 25};
+        for (int ele : arr){
+            System.out.print(ele + " ");
+        }
+        System.out.println();
+        System.out.println("tempArr int 1 size larger thar arr: ");
+        int[] tempArr = new int[arr.length + 1];
+        for (int ele : tempArr){
+            System.out.print(ele + " ");
+        }
+        System.out.println();
+        System.out.println("I copy values from arr to tempArr: ");
+        for(int i = 0; i < arr.length; i++){
+            tempArr[i] = arr[i];
+        }
+        System.out.println("Then ill copy arr as tempArr: ");
+        arr = tempArr;
+        for (int ele : arr){
+            System.out.print(ele + " ");
+        }
+        System.out.println();
+    }
+
     public static void exercise8(){
         System.out.println("Creating int array arr:");
         int[] arr = {20, 20, 40, 20, 30, 40, 50, 60, 50};
