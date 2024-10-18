@@ -47,6 +47,9 @@ public class Main {
                     case 11:
                         exercise11();
                         break;
+                    case 12:
+                        exercise12();
+                        break;
                     default:
                         System.out.println("Closing program");
                         System.exit(0);
@@ -58,6 +61,30 @@ public class Main {
             }
         }
     }
+    public static void exercise12(){
+        System.out.println("Creating 2 dimensional array int arr: ");
+        int[][] arr = {
+                {1, 2, 3},
+                {2, 4, 6},
+                {3, 6, 9}
+        };
+        for(int i = 0; i < arr.length; i++){
+            for (int j = 0; j < arr[0].length; j++){
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+        System.out.println("Printing the diagonal: ");
+        for(int i = 0; i < arr.length; i++){
+            for (int j = 0; j < arr[0].length; j++){
+                if(i == j){
+                    System.out.print(arr[i][j] + " ");
+                }
+            }
+        }
+        System.out.println();
+    }
+
     public static void exercise11(){
         var scan = new Scanner(System.in);
         ArrayList<Integer> arr = new ArrayList<Integer>();
