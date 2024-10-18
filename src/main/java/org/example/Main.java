@@ -41,6 +41,9 @@ public class Main {
                     case 9:
                         exercise9();
                         break;
+                    case 10:
+                        exercise10();
+                        break;
                     default:
                         System.out.println("Closing program");
                         System.exit(0);
@@ -52,6 +55,23 @@ public class Main {
             }
         }
     }
+    public static void exercise10(){
+        System.out.println("Creating a multiplication table of size 10:");
+        int[][] arr = new int[10][10];
+        for(int i = 1; i < arr.length + 1; i++){
+            for (int j = 1; j < arr[0].length + 1; j++){
+                arr[i - 1][j - 1] = i * j;
+            }
+        }
+        System.out.println("Matrix arr: ");
+        for(int i = 0; i < arr.length; i++){
+            for (int j = 0; j < arr[0].length; j++){
+                System.out.format("%2d ", arr[i][j]);
+            }
+            System.out.println();
+        }
+    }
+
     public static void exercise9(){
         System.out.println("In order to expand a array I would simple use a ArrayList but that is too easy so Ill use a temporal array with 1 extra slot and copy.");
         System.out.println("Initial array int arr with size 4: ");
